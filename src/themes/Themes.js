@@ -1,0 +1,31 @@
+export const ICONS = {
+  eye_open: require('../assets/icons/eye_open.png'),
+  eye_close: require('../assets/icons/eye_close.png'),
+  location: require('../assets/icons/location.png'),
+  back: require('../assets/icons/back.png'),
+  logout: require('../assets/icons/logout.png'),
+};
+
+export const COLORS = {
+  background: '#F9F9F9',
+  white: '#FFFFFF',
+  blue: '#0084C7',
+  red: '#E34E3F',
+  placeholderColor: '#848484',
+  textColor: '#565656',
+  black: '#000000',
+  lightGreen: '#06B2A6',
+  light_grey: '#969AA8',
+  amber: '#E88439',
+  buttonBorderColor: '#707070',
+  merchantTextColor: '#00D21C',
+  headerBackgroundColor: '#F8F8F8',
+  borderColor: '#84848480',
+  otpSubTextColor: '#666666',
+  locationBorderColor: '#AAAAAA',
+  locationTextColor: '#F66758',
+  green: '#FF8B20',
+  grey: '#8B8E8F',
+  otpborderColor: '#FCBF00',
+  locationBackgroundColor: '#CCCCCC',
+};
