@@ -8,7 +8,7 @@ import Modal from 'react-native-modal';
 import normalize from '../../utils/helpers/normalize';
 import {navigate} from '../../utils/helpers/RootNaivgation';
 import {useDispatch} from 'react-redux';
-import MapView, {Marker} from 'react-native-maps';
+import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import {Platform} from 'react-native';
 import {requestLocationPermission} from '../../utils/helpers/AndroidLocationPremissionRequest';
 import Geolocation from 'react-native-geolocation-service';
@@ -105,6 +105,7 @@ export default function DashBoard() {
           width: '100%',
           height: '82%',
         }}
+        provider={PROVIDER_GOOGLE}
         region={region}
         showsUserLocation={true}
         userLocationPriority={'balanced'}
