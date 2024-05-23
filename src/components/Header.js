@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {memo} from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
-import {COLORS, FONTS, ICONS} from '../themes/Themes';
+import {COLORS, ICONS} from '../themes/Themes';
 import PropTypes from 'prop-types';
 import normalize from '../utils/helpers/normalize';
 import {goBack} from '../utils/helpers/RootNaivgation';
@@ -54,7 +54,6 @@ const Header = props => {
       )}
       <Text
         style={{
-          fontFamily: props.fontFamily,
           color: props.titleColor,
           textTransform: props.textTransform,
           fontSize: normalize(14),
@@ -76,7 +75,6 @@ const Header = props => {
           ) : (
             <Text
               style={{
-                fontFamily: FONTS.Inter_Medium,
                 fontSize: normalize(14),
                 color: COLORS.white,
                 paddingRight: normalize(20),
@@ -99,7 +97,7 @@ Header.propTypes = {
   width: PropTypes.number,
   borderTopWidth: PropTypes.number,
   borderBottomWidth: PropTypes.number,
-  fontFamily: PropTypes.any,
+
   isBackPress: PropTypes.bool,
   goBacked: PropTypes.func,
   rightVisible: PropTypes.bool,
@@ -120,7 +118,6 @@ Header.defaultProps = {
   width: '100%',
   borderTopWidth: normalize(0.5),
   borderBottomWidth: normalize(0.5),
-  fontFamily: FONTS.Inter_SemiBold,
   isBackPress: false,
   rightVisible: false,
   rigthImageUri: '',

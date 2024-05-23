@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {memo} from 'react';
-import {Image, Text, TouchableOpacity, View} from 'react-native';
-import {COLORS, FONTS, ICONS} from '../themes/Themes';
+import {Image, Text, TouchableOpacity} from 'react-native';
+import {COLORS, ICONS} from '../themes/Themes';
 import PropTypes from 'prop-types';
 import normalize from '../utils/helpers/normalize';
 
@@ -55,7 +55,6 @@ const Button = props => {
       )}
       <Text
         style={{
-          fontFamily: props.fontFamily,
           color: props.textColor,
           fontSize: props.fontSize,
           marginTop: 0,
@@ -101,7 +100,7 @@ Button.propTypes = {
   borderColor: PropTypes.string,
   borderWidth: PropTypes.number,
   textAlign: PropTypes.string,
-  fontFamily: PropTypes.string,
+
   marginLeft: PropTypes.any,
   marginRight: PropTypes.any,
   activeOpacity: PropTypes.number,
@@ -130,7 +129,7 @@ Button.defaultProps = {
   borderColor: COLORS.lightGreen,
   borderWidth: 0,
   textAlign: 'center',
-  fontFamily: FONTS.Inter_Medium,
+
   marginLeft: 0,
   marginRight: 0,
   activeOpacity: 0.5,
