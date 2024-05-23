@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Keyboard,
   Platform,
+  Text,
 } from 'react-native';
 import {COLORS} from '../../themes/Themes';
 import MyStatusBar from '../../utils/helpers/MyStatusBar';
@@ -19,6 +20,7 @@ import Toast from '../../utils/helpers/Toast';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import constants from '../../utils/helpers/constants';
 import {loginRequest} from '../../redux/reducer/AuthReducer';
+import BiometricAuth from '../../utils/helpers/Biometric';
 
 // import {generateDeviceToken} from '../../utils/helpers/FirebaseToken';
 export default function Login(props) {
@@ -64,6 +66,14 @@ export default function Login(props) {
       }
       Keyboard.dismiss();
     }
+  };
+
+  const loginWithBioMetric = () => {
+    let body = {
+      username: '',
+      password: '',
+    };
+    dispatch(loginRequest(body));
   };
 
   return (
@@ -116,6 +126,12 @@ export default function Login(props) {
               getValidateUser();
             }}
           />
+          <Text style={{alignSelf: 'center', marginTop: normalize(50)}}>
+            Or
+          </Text>
+          <View style={{marginTop: normalize(10)}}>
+            <BiometricAuth onSuccess={data => loginWithBioMetric()} />
+          </View>
         </View>
       </KeyboardAvoidingView>
     </>

@@ -4,6 +4,7 @@ export const ICONS = {
   location: require('../assets/icons/location.png'),
   back: require('../assets/icons/back.png'),
   logout: require('../assets/icons/logout.png'),
+  fingerPrint: require('../assets/icons/fingerPrint.png'),
 };
 
 export const COLORS = {
